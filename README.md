@@ -36,12 +36,24 @@ There are 2 ways to install the libraries
   * **Automatic** *(Recommended)*
     * Use ```pip install -r path/to/requirements.txt``` while inside a shell with an active virtual environment. This will use the ```requirements.txt``` file provided in the repository, with the correct versions of the packages needed.
 
+### Setup your Excel file
+Take a look at the sample ```labels.xlsx``` file provided in this repo and insert your data accordingly. Below is the explaination of each column.
+
+| Excel Field | Explaination |
+| --- | --- |
+| Id  | The label id inside the label file |
+| En  | The label value to be exported in the english label file |
+| It  | The label value to be exported in the italian label file |
+| Comment | The comment to put below each label |
+| Help | Accepts ```0 - 1```. Specifies if a help label will also be created for this label |
+| Description | Not used by the script. Its only purpose is to provide with more information about the label. Can be left empty |
+
 ### Run the script
 Type ```python xl2lbl.py <path/to/excel/file> <path/to/output_english.txt> <path/to/output_english.txt>```
 The script accepts 3 command line arguments. All of the arguments are **optional**.
 
-| Argument | Default |
-| -------- | ------- |
-| ```path/to/input_excel.xlsx``` | "Labels.xlsx" |
-| ```path/to/label_output_en.txt``` | "en-US.txt" |
-| ```path/to/label_output_it.txt``` | "it-IT.txt" |
+| Argument                          | Default       |
+| --------------------------------- | ------------- |
+| ```path/to/input_excel.xlsx```    | "labels.xlsx" |
+| ```path/to/label_output_en.txt``` | "en-US.txt"   |
+| ```path/to/label_output_it.txt``` | "it-IT.txt"   |
